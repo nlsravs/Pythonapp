@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Loop Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .exercise {
+            margin-bottom: 40px;
+        }
+        .code-block {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Python Loop Exercises</h1>
+
+    <div class="exercise">
+        <h2>Exercise 1: Print First 10 Natural Numbers Using While Loop</h2>
+        <img src="Screenshot (82).png" alt="Exercise 1 Image">
+        <div class="code-block">
+            <code>
+i = 1
+while i &lt;= 10:
+    print(i)
+    i += 1
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 2: Print Number Pattern</h2>
+        <img src="Screenshot (83).png" alt="Exercise 2 Image">
+        <div class="code-block">
+            <code>
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(j, end=' ')
+    print()
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 3: Calculate Sum of All Numbers from 1 to Given Number</h2>
+        <img src="Screenshot (84).png" alt="Exercise 3 Image">
+        <div class="code-block">
+            <code>
+num = int(input("Enter number: "))
+total_sum = sum(range(1, num + 1))
+print(f"Sum is: {total_sum}")
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 4: Print Multiplication Table of a Given Number</h2>
+        <img src="Screenshot (85).png" alt="Exercise 4 Image">
+        <div class="code-block">
+            <code>
+num = int(input("Enter number: "))
+for i in range(1, 11):
+    print(num * i)
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 5: Display Numbers from a List with Conditions</h2>
+        <img src="Screenshot (86).png" alt="Exercise 5 Image">
+        <div class="code-block">
+            <code>
+numbers = [12, 75, 150, 180, 145, 525, 50]
+for number in numbers:
+    if number > 500:
+        break
+    if number > 150:
+        continue
+    if number % 5 == 0:
+        print(number)
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 6: Count the Total Number of Digits in a Number</h2>
+        <img src="Screenshot (88).png" alt="Exercise 6 Image">
+        <div class="code-block">
+            <code>
+number = int(input("Enter a number: "))
+count = 0
+while number > 0:
+    number //= 10
+    count += 1
+print(f"Total digits: {count}")
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 7: Print Reverse Number Pattern</h2>
+        <img src="Screenshot (87).png" alt="Exercise 7 Image">
+        <div class="code-block">
+            <code>
+for i in range(5, 0, -1):
+    for j in range(i, 0, -1):
+        print(j, end=' ')
+    print()
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 8: Print List in Reverse Order</h2>
+        <img src="Screenshot (89).png" alt="Exercise 8 Image">
+        <div class="code-block">
+            <code>
+list1 = [10, 20, 30, 40, 50]
+for item in reversed(list1):
+    print(item)
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 9: Display Numbers from -10 to -1 Using For Loop</h2>
+        <img src="Screenshot (90).png" alt="Exercise 9 Image">
+        <div class="code-block">
+            <code>
+for i in range(-10, 0):
+    print(i)
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 10: Use Else Block to Display a Message</h2>
+        <img src="Screenshot (91).png" alt="Exercise 10 Image">
+        <div class="code-block">
+            <code>
+for i in range(5):
+    print(i)
+else:
+    print("Done!")
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 11: Display All Prime Numbers Within a Range</h2>
+        <img src="Screenshot (95).png" alt="Exercise 11 Image">
+        <div class="code-block">
+            <code>
+start = 25
+end = 50
+
+for num in range(start, end + 1):
+    if num &gt; 1:
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                break
+        else:
+            print(num)
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 12: Display Fibonacci Series Up to 10 Terms</h2>
+        <img src="Screenshot (93).png" alt="Exercise 12 Image">
+        <div class="code-block">
+            <code>
+a, b = 0, 1
+print("Fibonacci sequence:")
+for _ in range(10):
+    print(a, end=' ')
+    a, b = b, a + b
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 13: Find the Factorial of a Given Number</h2>
+        <img src="Screenshot (96).png" alt="Exercise 13 Image">
+        <div class="code-block">
+            <code>
+num = int(input("Enter a number: "))
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print(factorial)
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 14: Reverse a Given Integer Number</h2>
+        <img src="Screenshot (98).png" alt="Exercise 14 Image">
+        <div class="code-block">
+            <code>
+number = int(input("Enter a number: "))
+reverse = 0
+while number &gt; 0:
+    reverse = reverse * 10 + number % 10
+    number //= 10
+print(reverse)
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 15: Display Elements from List at Odd Index Positions</h2>
+        <img src="Screenshot (99).png" alt="Exercise 15 Image">
+        <div class="code-block">
+            <code>
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for i in range(1, len(my_list), 2):
+    print(my_list[i], end=' ')
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 16: Calculate the Cube of All Numbers from 1 to a Given Number</h2>
+        <img src="Screenshot (101).png" alt="Exercise 16 Image">
+        <div class="code-block">
+            <code>
+input_number = int(input("Enter a number: "))
+for i in range(1, input_number + 1):
+    print(f"Current Number is : {i} and the cube is {i ** 3}")
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 17: Find the Sum of the Series Up to n Terms</h2>
+        <img src="Screenshot (103).png" alt="Exercise 17 Image">
+        <div class="code-block">
+            <code>
+n = int(input("Enter number of terms: "))
+sum_series = sum(int('2' * i) for i in range(1, n + 1))
+print(sum_series)
+            </code>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercise 18: Print Star Pattern</h2>
+        <img src="Screenshot (102).png" alt="Exercise 18 Image">
+        <div class="code-block">
+            <code>
+for i in range(1, 6):
+    print('* ' * i)
+for i in range(4, 0, -1):
+    print('* ' * i)
+            </code>
+        </div>
+    </div>
+</body>
+</html>
